@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 func main() {
@@ -11,13 +10,21 @@ func main() {
 	var nome = "Fernando"
 	var versao float32 = 1.1
 
-	//declaração de variável sem o var
-	idade := 22
-
-	fmt.Println("Olá senhor ", nome, "sua idae é", idade)
+	fmt.Println("Olá senhor ", nome)
 	fmt.Println("Este programa está na versão", versao)
 
-	//para descobrir o tipo da variável
-	fmt.Println("O tipo da variável é", reflect.TypeOf(nome))
+	fmt.Println("1 - Iniciar monitoramento")
+	fmt.Println("2 - Exibir logs")
+	fmt.Println("3 - Sair")
+
+	var comando int
+
+	//pegando valor no terminal e jogando na variável comando, usando & para apontar pra referencia em memória
+	fmt.Scanf("%d", &comando)
+
+	//para mostrar o endereço da variável
+	fmt.Println("Endereço da variável", &comando)
+
+	fmt.Println("Comando escolhido", comando)
 
 }
