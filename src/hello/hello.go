@@ -22,14 +22,17 @@ func main() {
 	//pegando valor no terminal e jogando na variável comando, usando & para apontar pra referencia em memória
 	fmt.Scan(&comando)
 
-	if comando == 1 {
+	// no go, o switch não precisa de break
+	switch comando {
+	case 1:
 		fmt.Println("Monitorando...")
-	} else if comando == 2 {
+	case 2:
 		fmt.Println("Exibindo logs...")
-	} else if comando == 3 {
+	case 3:
 		fmt.Println("Saindo do programa")
-	} else {
+	default:
 		fmt.Println("Comando não existe")
+
 	}
 
 }
