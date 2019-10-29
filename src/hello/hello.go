@@ -16,7 +16,7 @@ func main() {
 	// no go, o switch não precisa de break
 	switch comando {
 	case 1:
-		fmt.Println("Monitorando...")
+		iniciarMonitoramento()
 	case 2:
 		fmt.Println("Exibindo logs...")
 	case 3:
@@ -51,5 +51,15 @@ func leComando() int {
 	fmt.Scan(&comandoLido)
 
 	return comandoLido
+
+}
+
+func iniciarMonitoramento() {
+
+	fmt.Println("Monitorando...")
+
+	// site := "https://alura.com.br"
+
+	// resp, err = http.Get(site)
 
 }
